@@ -222,6 +222,14 @@ func (a VectorW) Sub(b VectorW) VectorW {
 	return VectorW{a.X - b.X, a.Y - b.Y, a.Z - b.Z, a.W - b.W}
 }
 
+func (a VectorW) AddScalar(b float64) VectorW {
+	return VectorW{a.X + b, a.Y + b, a.Z + b, a.W + b}
+}
+
+func (a VectorW) SubScalar(b float64) VectorW {
+	return VectorW{a.X - b, a.Y - b, a.Z - b, a.W - b}
+}
+
 func (a VectorW) MulScalar(b float64) VectorW {
 	return VectorW{a.X * b, a.Y * b, a.Z * b, a.W * b}
 }
